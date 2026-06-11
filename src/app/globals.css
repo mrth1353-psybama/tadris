@@ -37,3 +37,17 @@ h3,
 h4 {
   font-family: var(--font-heading), system-ui, sans-serif;
 }
+
+@keyframes fade-loop {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-loop {
+  animation: fade-loop 4s ease-in-out infinite;
+}

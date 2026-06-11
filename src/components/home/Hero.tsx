@@ -1,6 +1,7 @@
 import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
+import { TypewriterTitle } from "@/components/home/TypewriterTitle";
 import { siteConfig } from "@/lib/site-config";
 
 const tools = ["SPSS", "Amos", "Lisrel", "SEM"];
@@ -12,11 +13,12 @@ export function Hero() {
         <div>
           <Badge tone="teal">مشاور هوش مصنوعی و تحلیلگر آماری</Badge>
 
-          <h1 className="mt-6 text-4xl font-bold leading-tight text-brand-charcoal sm:text-5xl">
-            {siteConfig.tagline}
-          </h1>
+          <TypewriterTitle
+            text={siteConfig.tagline}
+            className="mt-6 text-4xl font-bold leading-tight text-brand-charcoal sm:text-5xl"
+          />
 
-          <p className="mt-4 text-xl font-semibold text-brand-navy">
+          <p className="animate-fade-loop mt-4 text-xl font-semibold text-brand-navy">
             {siteConfig.subTagline}
           </p>
 
