@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "ایمیل",
-    value: ["mrth1353@gmail.com", "09014314859"],
+    value: ["mrth1353@gmail.com", "تلفن تماس: 09014314859"],
   },
   {
     icon: Clock,
@@ -55,7 +55,7 @@ export default function ContactPage() {
                     <p
                       key={line}
                       className="mt-1 text-sm leading-7 text-brand-charcoal/70"
-                      dir={title === "ایمیل" ? "ltr" : undefined}
+                      dir={line.includes("@") ? "ltr" : undefined}
                     >
                       {line}
                     </p>
