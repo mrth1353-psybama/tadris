@@ -21,9 +21,7 @@ export function Hero() {
           </p>
 
           <p className="mt-6 max-w-xl text-base leading-8 text-brand-charcoal/70">
-            {siteConfig.description} اگر الان روی پایان‌نامه، مقاله یا
-            پروژه‌ای کار می‌کنید که با آمار یا هوش مصنوعی گیر کرده‌اید،
-            خوشحال می‌شوم یک جلسه کوتاه حرف بزنیم.
+            {siteConfig.description}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
