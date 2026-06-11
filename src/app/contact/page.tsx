@@ -16,17 +16,17 @@ const contactInfo = [
   {
     icon: Mail,
     title: "ایمیل",
-    value: "mrth1353@gmail.com",
+    value: ["mrth1353@gmail.com", "09014314859"],
   },
   {
     icon: Clock,
     title: "زمان پاسخ‌گویی",
-    value: "معمولاً ظرف ۲۴ تا ۴۸ ساعت کاری پاسخ داده می‌شود.",
+    value: ["معمولاً ظرف ۲۴ تا ۴۸ ساعت کاری پاسخ داده می‌شود."],
   },
   {
     icon: MessageCircle,
     title: "شبکه‌های اجتماعی",
-    value: socialLinks.map((link) => link.label).join(" · "),
+    value: [socialLinks.map((link) => link.label).join(" · ")],
   },
 ];
 
@@ -51,12 +51,15 @@ export default function ContactPage() {
                   <h3 className="text-sm font-bold text-brand-charcoal">
                     {title}
                   </h3>
-                  <p
-                    className="mt-1 text-sm leading-7 text-brand-charcoal/70"
-                    dir={title === "ایمیل" ? "ltr" : undefined}
-                  >
-                    {value}
-                  </p>
+                  {value.map((line) => (
+                    <p
+                      key={line}
+                      className="mt-1 text-sm leading-7 text-brand-charcoal/70"
+                      dir={title === "ایمیل" ? "ltr" : undefined}
+                    >
+                      {line}
+                    </p>
+                  ))}
                 </div>
               </Card>
             ))}
