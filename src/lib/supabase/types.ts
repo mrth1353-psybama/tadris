@@ -36,6 +36,7 @@ export interface Database {
           role?: UserRole;
           created_at?: string;
         };
+        Relationships: [];
       };
       services: {
         Row: {
@@ -71,6 +72,7 @@ export interface Database {
           features?: string[] | null;
           created_at?: string;
         };
+        Relationships: [];
       };
       orders: {
         Row: {
@@ -100,6 +102,15 @@ export interface Database {
           price?: number | null;
           created_at?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "orders_service_id_fkey";
+            columns: ["service_id"];
+            isOneToOne: false;
+            referencedRelation: "services";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       order_files: {
         Row: {
@@ -129,6 +140,15 @@ export interface Database {
           kind?: OrderFileKind;
           created_at?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "order_files_order_id_fkey";
+            columns: ["order_id"];
+            isOneToOne: false;
+            referencedRelation: "orders";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       testimonials: {
         Row: {
@@ -155,7 +175,17 @@ export interface Database {
           is_featured?: boolean;
           created_at?: string;
         };
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: {
+      is_admin: {
+        Args: Record<string, never>;
+        Returns: boolean;
+      };
+    };
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 }
