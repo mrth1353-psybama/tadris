@@ -10,13 +10,11 @@ const audiences = [
   },
   {
     title: "پژوهشگران دانشگاهی",
-    description:
-      "همراهی در طراحی مدل، تحلیل داده و استفاده معتبر از AI برای چاپ مقاله.",
+    description: "طراحی مدل، تحلیل داده و گزارش کامل تحلیل داده‌ها",
   },
   {
     title: "نویسندگان پایان‌نامه و رساله",
-    description:
-      "از طراحی پرسش‌نامه تا تفسیر خروجی SPSS، Amos و Lisrel به زبان ساده.",
+    description: "تحلیل داده‌ها و گزارش نویسی برای مقاله و پایان‌نامه",
   },
   {
     title: "اعضای هیئت علمی",
@@ -38,9 +36,8 @@ export function AudienceSection() {
       <Container>
         <SectionHeading
           eyebrow="مخاطبان"
-          title="برای چه کسانی مناسب است؟"
+          title="خدمات من برای چه کسانی مناسب است؟"
           align="center"
-          description="اگر در حوزه روان‌شناسی، مشاوره یا علوم تربیتی پژوهش می‌کنید، این خدمات برای شماست."
         />
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
