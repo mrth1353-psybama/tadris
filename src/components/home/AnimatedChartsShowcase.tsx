@@ -37,10 +37,10 @@ const scenes = [
 function BarChart() {
   const bars = [
     { height: 60, fill: "fill-brand-teal" },
-    { height: 95, fill: "fill-brand-navy" },
+    { height: 95, fill: "fill-brand-gold" },
     { height: 40, fill: "fill-brand-amber" },
     { height: 110, fill: "fill-brand-teal" },
-    { height: 75, fill: "fill-brand-navy" },
+    { height: 75, fill: "fill-brand-gold" },
   ];
 
   return (
@@ -91,7 +91,7 @@ function LineChart() {
       <path
         d={`M${points.map((p) => p.join(",")).join(" L")}`}
         fill="none"
-        className="stroke-brand-navy animate-draw-line"
+        className="stroke-brand-gold animate-draw-line"
         strokeWidth="3"
         strokeLinecap="round"
         pathLength="100"
@@ -206,7 +206,7 @@ function SemDiagram() {
             height="28"
             rx="4"
             fill="none"
-            className="stroke-brand-navy animate-pop-in"
+            className="stroke-brand-gold animate-pop-in"
             strokeWidth="2"
             style={{ animationDelay: `${0.3 + i * 0.2}s` }}
           />
@@ -237,7 +237,7 @@ function SemDiagram() {
 function PieChart() {
   const segments = [
     { value: 45, className: "stroke-brand-teal" },
-    { value: 30, className: "stroke-brand-navy" },
+    { value: 30, className: "stroke-brand-gold" },
     { value: 25, className: "stroke-brand-amber" },
   ];
 
@@ -304,7 +304,7 @@ export function AnimatedChartsShowcase() {
   const scene = scenes[index];
 
   return (
-    <div className="rounded-3xl border border-brand-charcoal/10 bg-gradient-to-br from-brand-espresso to-brand-rust p-8 shadow-lg">
+    <div className="rounded-3xl border border-brand-charcoal/10 bg-gradient-to-br from-brand-navy to-brand-charcoal p-8 shadow-lg">
       <p className="font-mono text-sm text-brand-sand/80">{scene.label}</p>
       <p className="mt-1 font-mono text-sm text-brand-gold">{scene.caption}</p>
 

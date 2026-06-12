@@ -15,7 +15,7 @@ const tools = [
 export function Hero() {
   return (
     <section className="overflow-hidden border-b border-brand-charcoal/10 bg-gradient-to-b from-brand-cream to-brand-peach">
-      <Container className="grid gap-10 py-8 sm:py-10 lg:grid-cols-2 lg:items-center lg:py-14">
+      <Container className="grid gap-10 py-3 sm:py-3.5 lg:grid-cols-2 lg:items-center lg:py-5">
         <div>
           <Badge tone="teal">مشاور هوش مصنوعی و تحلیلگر آماری</Badge>
 
