@@ -47,10 +47,11 @@ export function Hero() {
             <span className="text-sm text-brand-charcoal/60">
               تخصص نرم‌افزاری من:
             </span>
-            {tools.map((tool) => (
+            {tools.map((tool, i) => (
               <span
                 key={tool.name}
-                className={`rounded-md bg-gradient-to-br ${tool.gradient} px-3 py-1 font-mono text-sm text-white shadow-sm`}
+                className={`animate-badge-glow rounded-md bg-gradient-to-br ${tool.gradient} px-3 py-1 font-mono text-sm text-white shadow-sm`}
+                style={{ animationDelay: `${i * 0.8}s` }}
               >
                 {tool.name}
               </span>
