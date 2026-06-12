@@ -2,6 +2,7 @@ import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { TypewriterTitle } from "@/components/home/TypewriterTitle";
+import { AnimatedChartsShowcase } from "@/components/home/AnimatedChartsShowcase";
 import { siteConfig } from "@/lib/site-config";
 
 const tools = ["SPSS", "Amos", "Lisrel", "SEM"];
@@ -49,26 +50,7 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="rounded-3xl border border-brand-charcoal/10 bg-brand-cream p-8 shadow-lg">
-            <p className="font-mono text-sm text-brand-gray">model fit</p>
-            <p className="mt-2 font-mono text-lg text-brand-teal">
-              CFI = 0.96 · RMSEA = 0.048
-            </p>
-            <div className="mt-6 space-y-3">
-              <div className="h-3 w-full rounded-full bg-brand-ivory">
-                <div className="h-3 w-[92%] rounded-full bg-brand-teal" />
-              </div>
-              <div className="h-3 w-full rounded-full bg-brand-ivory">
-                <div className="h-3 w-[78%] rounded-full bg-brand-navy" />
-              </div>
-              <div className="h-3 w-full rounded-full bg-brand-ivory">
-                <div className="h-3 w-[65%] rounded-full bg-brand-amber" />
-              </div>
-            </div>
-            <p className="mt-6 text-sm leading-7 text-brand-charcoal/70">
-              «بذارید با یه مثال ساده توضیح بدم چرا این مدل بهتر کار می‌کنه.»
-            </p>
-          </div>
+          <AnimatedChartsShowcase />
         </div>
       </Container>
     </section>
