@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { notifyContactMessage } from "@/lib/email";
 
 export async function POST(request: Request) {
-  const { name, email, topic, message } = await request.json();
+  const { name, email, phone, topic, message } = await request.json();
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -14,6 +14,7 @@ export async function POST(request: Request) {
   await notifyContactMessage({
     name: String(name),
     email: String(email),
+    phone: phone ? String(phone) : undefined,
     topic: String(topic ?? "سایر موارد"),
     message: String(message),
   });

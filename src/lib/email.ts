@@ -43,11 +43,13 @@ export async function notifyNewOrder({
 export async function notifyContactMessage({
   name,
   email,
+  phone,
   topic,
   message,
 }: {
   name: string;
   email: string;
+  phone?: string;
   topic: string;
   message: string;
 }) {
@@ -66,6 +68,7 @@ export async function notifyContactMessage({
         <h2>پیام جدید از فرم تماس سایت</h2>
         <p><strong>نام:</strong> ${name}</p>
         <p><strong>ایمیل:</strong> ${email}</p>
+        ${phone ? `<p><strong>تلفن:</strong> ${phone}</p>` : ""}
         <p><strong>موضوع:</strong> ${topic}</p>
         <p><strong>پیام:</strong><br />${message.replace(/\n/g, "<br />")}</p>
       </div>
