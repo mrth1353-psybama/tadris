@@ -25,7 +25,6 @@ export function ContactForm() {
     const formData = new FormData(form);
 
     const name = String(formData.get("name") ?? "");
-    const email = String(formData.get("email") ?? "");
     const phone = String(formData.get("phone") ?? "");
     const topic = String(formData.get("topic") ?? "");
     const message = String(formData.get("message") ?? "");
@@ -34,7 +33,7 @@ export function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, topic, message }),
+        body: JSON.stringify({ name, phone, topic, message }),
       });
 
       if (!response.ok) {
@@ -71,36 +70,20 @@ export function ContactForm() {
         </div>
         <div>
           <label
-            htmlFor="email"
+            htmlFor="phone"
             className="mb-2 block text-sm font-semibold text-brand-charcoal"
           >
-            ایمیل
+            شماره تلفن
           </label>
           <input
-            id="email"
-            name="email"
-            type="email"
+            id="phone"
+            name="phone"
+            type="tel"
             required
             dir="ltr"
             className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
           />
         </div>
-      </div>
-
-      <div>
-        <label
-          htmlFor="phone"
-          className="mb-2 block text-sm font-semibold text-brand-charcoal"
-        >
-          شماره تلفن
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          dir="ltr"
-          className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
-        />
       </div>
 
       <div>

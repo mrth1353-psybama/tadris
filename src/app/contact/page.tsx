@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const contactInfo = [
   {
     icon: Mail,
-    title: "ایمیل",
+    title: "راه‌های ارتباط با من",
     value: ["ایمیل من : mrth1353@gmail.com", "تلفن تماس من: 09014314859"],
     card: "!bg-brand-navy/15",
   },
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   {value.map((line) => (
                     <p
                       key={line}
-                      className="mt-1 text-sm leading-7 text-brand-charcoal/70"
+                      className="mt-1 text-sm font-semibold leading-7 text-brand-charcoal"
                     >
                       {line}
                     </p>
