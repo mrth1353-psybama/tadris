@@ -16,8 +16,8 @@ export function ServicesPreview() {
       <Container>
         <SectionHeading
           eyebrow="خدمات"
-          title="دو تخصصی که کنار هم کم پیدا می‌شود"
-          description="ترکیب مدل‌یابی معادلات ساختاری در روان‌شناسی و مشاوره با کاربرد هوشمندانه هوش مصنوعی در پژوهش — همه در یک‌جا."
+          title="دو تخصص در یک قاب"
+          description="ترکیب مدل‌یابی معادلات ساختاری در روان‌شناسی و مشاوره هوش مصنوعی در پژوهش — همه در یک‌جا."
         />
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
