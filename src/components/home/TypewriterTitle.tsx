@@ -2,20 +2,27 @@
 
 import { useEffect, useState } from "react";
 
+type TitleSegment = {
+  text: string;
+  newLine?: boolean;
+  small?: boolean;
+};
+
 export function TypewriterTitle({
-  text,
+  segments,
   className,
 }: {
-  text: string;
+  segments: TitleSegment[];
   className?: string;
 }) {
+  const fullText = segments.map((segment) => segment.text).join("");
   const [length, setLength] = useState(0);
 
   useEffect(() => {
     setLength(0);
     const interval = setInterval(() => {
       setLength((current) => {
-        if (current >= text.length) {
+        if (current >= fullText.length) {
           clearInterval(interval);
           return current;
         }
@@ -24,7 +31,30 @@ export function TypewriterTitle({
     }, 60);
 
     return () => clearInterval(interval);
-  }, [text]);
+  }, [fullText]);
 
-  return <h1 className={className}>{text.slice(0, length)}</h1>;
+  let consumed = 0;
+
+  return (
+    <h1 className={className}>
+      {segments.map((segment, i) => {
+        const start = consumed;
+        consumed += segment.text.length;
+        const visibleLength = Math.max(
+          0,
+          Math.min(length - start, segment.text.length)
+        );
+        const visibleText = segment.text.slice(0, visibleLength);
+
+        return (
+          <span key={i}>
+            {segment.newLine && <br />}
+            <span className={segment.small ? "text-2xl sm:text-3xl" : undefined}>
+              {visibleText}
+            </span>
+          </span>
+        );
+      })}
+    </h1>
+  );
 }

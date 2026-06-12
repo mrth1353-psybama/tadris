@@ -20,7 +20,11 @@ export function Hero() {
           <Badge tone="teal">مشاور هوش مصنوعی و تحلیلگر آماری</Badge>
 
           <TypewriterTitle
-            text={siteConfig.tagline}
+            segments={[
+              { text: "تحلیل آماری" },
+              { text: "مخصوص", newLine: true, small: true },
+              { text: " رشته‌های روان‌شناسی و علوم تربیتی." },
+            ]}
             className="mt-6 text-4xl font-bold leading-tight text-brand-charcoal sm:text-5xl"
           />
 
