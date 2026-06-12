@@ -25,6 +25,13 @@ const audiences = [
   },
 ];
 
+const cardStyles = [
+  { card: "!bg-brand-navy/8", title: "text-brand-charcoal", description: "text-brand-charcoal/70" },
+  { card: "!bg-brand-navy/20", title: "text-brand-charcoal", description: "text-brand-charcoal/70" },
+  { card: "!bg-brand-navy/35", title: "text-brand-charcoal", description: "text-brand-charcoal/70" },
+  { card: "!bg-brand-navy", title: "text-white", description: "text-white/75" },
+];
+
 export function AudienceSection() {
   return (
     <section className="bg-brand-sand py-16 sm:py-24">
@@ -33,20 +40,23 @@ export function AudienceSection() {
           eyebrow="مخاطبان"
           title="برای چه کسانی مناسب است؟"
           align="center"
-          description="اگر در حوزه روان‌شناسی، مشاوره یا علوم تربیتی پژوهش می‌کنید و با آمار یا هوش مصنوعی گیر کرده‌اید، این خدمات برای شماست."
+          description="اگر در حوزه روان‌شناسی، مشاوره یا علوم تربیتی پژوهش می‌کنید، این خدمات برای شماست."
         />
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {audiences.map((item) => (
-            <Card key={item.title}>
-              <h3 className="text-base font-bold text-brand-charcoal">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-7 text-brand-charcoal/70">
-                {item.description}
-              </p>
-            </Card>
-          ))}
+          {audiences.map((item, index) => {
+            const style = cardStyles[index];
+            return (
+              <Card key={item.title} className={style.card}>
+                <h3 className={`text-base font-bold ${style.title}`}>
+                  {item.title}
+                </h3>
+                <p className={`mt-2 text-sm leading-7 ${style.description}`}>
+                  {item.description}
+                </p>
+              </Card>
+            );
+          })}
         </div>
       </Container>
     </section>

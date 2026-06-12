@@ -19,6 +19,33 @@ const categoryIcons: Record<ServiceCategory, typeof ChartSpline> = {
 
 const categoryOrder: ServiceCategory[] = ["statistical_analysis", "ai_consulting"];
 
+const tierStyles = [
+  {
+    card: "!bg-brand-navy/8",
+    title: "text-brand-charcoal",
+    description: "text-brand-charcoal/70",
+    icon: "text-brand-teal",
+    feature: "text-brand-charcoal/80",
+    button: "",
+  },
+  {
+    card: "!bg-brand-navy/22",
+    title: "text-brand-charcoal",
+    description: "text-brand-charcoal/70",
+    icon: "text-brand-navy",
+    feature: "text-brand-charcoal/80",
+    button: "",
+  },
+  {
+    card: "!bg-brand-navy",
+    title: "text-white",
+    description: "text-white/75",
+    icon: "text-brand-gold",
+    feature: "text-white/85",
+    button: "!border-white/30 !text-white hover:!bg-white/10",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -30,7 +57,13 @@ export default function ServicesPage() {
         return (
           <section
             key={categoryKey}
-            className={index % 2 === 1 ? "bg-brand-peach py-16 sm:py-24" : "py-16 sm:py-24"}
+            className={
+              index === 0
+                ? "pt-6 sm:pt-10 pb-16 sm:pb-24"
+                : index % 2 === 1
+                  ? "bg-brand-peach py-16 sm:py-24"
+                  : "py-16 sm:py-24"
+            }
           >
             <Container>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -48,32 +81,40 @@ export default function ServicesPage() {
               </div>
 
               <div className="mt-10 grid gap-6 lg:grid-cols-3">
-                {items.map((service) => (
-                  <Card key={service.slug} className="flex flex-col">
-                    <h3 className="text-lg font-bold text-brand-charcoal">
-                      {service.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-7 text-brand-charcoal/70">
-                      {service.shortDescription}
-                    </p>
-                    <ul className="mt-4 flex-1 space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <CheckCircle2
-                            className="mt-0.5 shrink-0 text-brand-teal"
-                            size={16}
-                          />
-                          <span className="text-sm leading-7 text-brand-charcoal/80">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    <LinkButton href="/contact" variant="outline" className="mt-6">
-                      درخواست مشاوره
-                    </LinkButton>
-                  </Card>
-                ))}
+                {items.map((service, i) => {
+                  const tier = tierStyles[i];
+
+                  return (
+                    <Card key={service.slug} className={`flex flex-col ${tier.card}`}>
+                      <h3 className={`text-lg font-bold ${tier.title}`}>
+                        {service.title}
+                      </h3>
+                      <p className={`mt-2 text-sm leading-7 ${tier.description}`}>
+                        {service.shortDescription}
+                      </p>
+                      <ul className="mt-4 flex-1 space-y-2">
+                        {service.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2">
+                            <CheckCircle2
+                              className={`mt-0.5 shrink-0 ${tier.icon}`}
+                              size={16}
+                            />
+                            <span className={`text-sm leading-7 ${tier.feature}`}>
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                      <LinkButton
+                        href="/contact"
+                        variant="outline"
+                        className={`mt-6 ${tier.button}`}
+                      >
+                        درخواست مشاوره
+                      </LinkButton>
+                    </Card>
+                  );
+                })}
               </div>
             </Container>
           </section>
