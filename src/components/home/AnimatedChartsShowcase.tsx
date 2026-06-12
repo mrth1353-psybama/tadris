@@ -11,26 +11,31 @@ const scenes = [
     id: "bar",
     label: "نمودار میله‌ای",
     caption: "مقایسه میانگین گروه‌ها",
+    gradientFrom: "#2f7bd1",
   },
   {
     id: "line",
     label: "نمودار روند",
     caption: "تغییرات یک متغیر در طول زمان",
+    gradientFrom: "#2563eb",
   },
   {
     id: "scatter",
     label: "نمودار پراکنش",
     caption: "رابطه بین دو متغیر و خط رگرسیون",
+    gradientFrom: "#1d4ed8",
   },
   {
     id: "sem",
     label: "مدل معادلات ساختاری",
     caption: "CFI = 0.96 · RMSEA = 0.048",
+    gradientFrom: "#185fa5",
   },
   {
     id: "pie",
     label: "نمودار دایره‌ای",
     caption: "سهم هر گروه از کل نمونه",
+    gradientFrom: "#123a66",
   },
 ] as const;
 
@@ -304,7 +309,12 @@ export function AnimatedChartsShowcase() {
   const scene = scenes[index];
 
   return (
-    <div className="rounded-3xl border border-brand-charcoal/10 bg-gradient-to-br from-brand-navy to-brand-charcoal p-8 shadow-lg">
+    <div
+      className="rounded-3xl border border-brand-charcoal/10 p-8 shadow-lg transition-[background] duration-700 ease-in-out"
+      style={{
+        background: `linear-gradient(to bottom right, ${scene.gradientFrom}, #2c2c2a)`,
+      }}
+    >
       <p className="font-mono text-sm text-brand-sand/80">{scene.label}</p>
       <p className="mt-1 font-mono text-sm text-brand-gold">{scene.caption}</p>
 
