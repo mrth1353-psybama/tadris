@@ -9,6 +9,9 @@
   --color-brand-sand: #f1ddc2;
   --color-brand-peach: #fbe2cf;
   --color-brand-espresso: #3b2c22;
+  --color-brand-coral: #ef6f5b;
+  --color-brand-gold: #f5b942;
+  --color-brand-rust: #c1542c;
   --color-brand-charcoal: #2c2c2a;
   --color-brand-gray: #888780;
 }
@@ -22,6 +25,9 @@
   --color-brand-sand: var(--color-brand-sand);
   --color-brand-peach: var(--color-brand-peach);
   --color-brand-espresso: var(--color-brand-espresso);
+  --color-brand-coral: var(--color-brand-coral);
+  --color-brand-gold: var(--color-brand-gold);
+  --color-brand-rust: var(--color-brand-rust);
   --color-brand-charcoal: var(--color-brand-charcoal);
   --color-brand-gray: var(--color-brand-gray);
 

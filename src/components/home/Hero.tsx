@@ -5,7 +5,12 @@ import { TypewriterTitle } from "@/components/home/TypewriterTitle";
 import { AnimatedChartsShowcase } from "@/components/home/AnimatedChartsShowcase";
 import { siteConfig } from "@/lib/site-config";
 
-const tools = ["SPSS", "Amos", "Lisrel", "SEM"];
+const tools = [
+  { name: "SPSS", gradient: "from-brand-amber to-brand-teal" },
+  { name: "Amos", gradient: "from-brand-coral to-brand-navy" },
+  { name: "Lisrel", gradient: "from-brand-gold to-brand-navy" },
+  { name: "SEM", gradient: "from-brand-rust to-brand-teal" },
+];
 
 export function Hero() {
   return (
@@ -36,14 +41,14 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <span className="text-sm text-brand-charcoal/60">
-              تخصص نرم‌افزاری:
+              تخصص نرم‌افزاری من:
             </span>
             {tools.map((tool) => (
               <span
-                key={tool}
-                className="rounded-md bg-brand-cream px-3 py-1 font-mono text-sm text-brand-charcoal shadow-sm ring-1 ring-brand-charcoal/10"
+                key={tool.name}
+                className={`rounded-md bg-gradient-to-br ${tool.gradient} px-3 py-1 font-mono text-sm text-white shadow-sm`}
               >
-                {tool}
+                {tool.name}
               </span>
             ))}
           </div>
