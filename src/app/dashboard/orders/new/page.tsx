@@ -5,7 +5,7 @@ import { NewOrderForm } from "@/components/dashboard/NewOrderForm";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
-  title: "ثبت سفارش جدید | DataMind AI",
+  title: "ثبت سفارش جدید | AI & Data Analysis",
 };
 
 export default async function NewOrderPage() {

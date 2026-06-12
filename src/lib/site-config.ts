@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "DataMind AI",
+  name: "AI & Data Analysis",
   nameFa: "دیتامایند ای‌آی",
   tagline: "تحلیل آماری مخصوص رشته‌های روان‌شناسی و علوم تربیتی.",
   subTagline: "مشاور هوش مصنوعی برای کسب‌وکارهای کوچک",

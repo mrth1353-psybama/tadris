@@ -8,7 +8,7 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { serviceCategories, services, type ServiceCategory } from "@/lib/services-data";
 
 export const metadata: Metadata = {
-  title: "خدمات و تعرفه‌ها | DataMind AI",
+  title: "خدمات و تعرفه‌ها | AI & Data Analysis",
   description:
     "خدمات تحلیل آماری، مدل‌یابی معادلات ساختاری (SEM) با SPSS/Amos/Lisrel و مشاوره کاربرد هوش مصنوعی در پژوهش، برای دانشجویان، پژوهشگران و اعضای هیئت علمی.",
 };

@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/Badge";
 import { CtaBanner } from "@/components/shared/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "درباره من | DataMind AI",
+  title: "درباره من | AI & Data Analysis",
   description:
     "آشنایی با محمدرضا تدریس حسنی، آماری‌شناس و مشاور هوش مصنوعی متخصص تحلیل داده و مدل‌یابی معادلات ساختاری (SEM) برای پژوهش‌های روان‌شناسی، مشاوره و علوم تربیتی.",
 };

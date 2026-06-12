@@ -8,9 +8,9 @@ import { CtaBanner } from "@/components/shared/CtaBanner";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
-  title: "نمونه‌کار و نظرات | DataMind AI",
+  title: "نمونه‌کار و نظرات | AI & Data Analysis",
   description:
-    "نمونه‌ای از پروژه‌های تحلیل آماری و SEM، گواهینامه‌ها و نظرات دانشجویان و پژوهشگرانی که با DataMind AI همکاری کرده‌اند.",
+    "نمونه‌ای از پروژه‌های تحلیل آماری و SEM، گواهینامه‌ها و نظرات دانشجویان و پژوهشگرانی که با AI & Data Analysis همکاری کرده‌اند.",
 };
 
 type SampleProject = {
@@ -187,7 +187,7 @@ export default async function PortfolioPage() {
               </div>
               <p className="text-sm leading-7 text-brand-charcoal/70">
                 هنوز نظری ثبت نشده است. به‌زودی نظرات دانشجویان و پژوهشگرانی
-                که با DataMind AI همکاری کرده‌اند، در این بخش نمایش داده
+                که با AI & Data Analysis همکاری کرده‌اند، در این بخش نمایش داده
                 می‌شود.
               </p>
             </Card>

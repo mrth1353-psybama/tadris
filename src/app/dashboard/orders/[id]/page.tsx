@@ -9,7 +9,7 @@ import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 import type { OrderFileKind, OrderStatus } from "@/lib/supabase/types";
 
 export const metadata: Metadata = {
-  title: "جزئیات سفارش | DataMind AI",
+  title: "جزئیات سفارش | AI & Data Analysis",
 };
 
 type OrderDetail = {

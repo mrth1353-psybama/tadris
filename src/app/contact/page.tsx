@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { socialLinks } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "تماس با من | DataMind AI",
+  title: "تماس با من | AI & Data Analysis",
   description:
     "برای رزرو جلسه مشاوره رایگان یا ثبت درخواست تحلیل آماری و مدل‌یابی معادلات ساختاری (SEM)، فرم تماس را پر کنید.",
 };

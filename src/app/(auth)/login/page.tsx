@@ -7,7 +7,7 @@ import { SupabaseNotConfiguredNotice } from "@/components/auth/SupabaseNotConfig
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 
 export const metadata: Metadata = {
-  title: "ورود | DataMind AI",
+  title: "ورود | AI & Data Analysis",
 };
 
 export default function LoginPage() {

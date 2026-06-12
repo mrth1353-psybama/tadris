@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/Button";
+import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
 
 const errorMessages: Record<string, string> = {
   "User already registered": "این ایمیل قبلاً ثبت‌نام کرده است.",
@@ -62,63 +63,73 @@ export function SignupForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div>
-        <label
-          htmlFor="full_name"
-          className="mb-2 block text-sm font-semibold text-brand-charcoal"
-        >
-          نام و نام خانوادگی
-        </label>
-        <input
-          id="full_name"
-          name="full_name"
-          type="text"
-          required
-          className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
-        />
+    <div className="space-y-5">
+      <GoogleAuthButton redirectTo="/dashboard" />
+
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-brand-charcoal/10" />
+        <span className="text-xs text-brand-charcoal/50">یا</span>
+        <div className="h-px flex-1 bg-brand-charcoal/10" />
       </div>
 
-      <div>
-        <label
-          htmlFor="email"
-          className="mb-2 block text-sm font-semibold text-brand-charcoal"
-        >
-          ایمیل
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          dir="ltr"
-          className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
-        />
-      </div>
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <div>
+          <label
+            htmlFor="full_name"
+            className="mb-2 block text-sm font-semibold text-brand-charcoal"
+          >
+            نام و نام خانوادگی
+          </label>
+          <input
+            id="full_name"
+            name="full_name"
+            type="text"
+            required
+            className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
+          />
+        </div>
 
-      <div>
-        <label
-          htmlFor="password"
-          className="mb-2 block text-sm font-semibold text-brand-charcoal"
-        >
-          رمز عبور
-        </label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          required
-          minLength={6}
-          dir="ltr"
-          className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
-        />
-      </div>
+        <div>
+          <label
+            htmlFor="email"
+            className="mb-2 block text-sm font-semibold text-brand-charcoal"
+          >
+            ایمیل
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            dir="ltr"
+            className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
+          />
+        </div>
 
-      {error && <p className="text-sm text-red-600">{error}</p>}
+        <div>
+          <label
+            htmlFor="password"
+            className="mb-2 block text-sm font-semibold text-brand-charcoal"
+          >
+            رمز عبور
+          </label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            minLength={6}
+            dir="ltr"
+            className="w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none focus:border-brand-teal"
+          />
+        </div>
 
-      <Button type="submit" disabled={loading} className="w-full">
-        {loading ? "در حال ثبت‌نام..." : "ثبت‌نام"}
-      </Button>
-    </form>
+        {error && <p className="text-sm text-red-600">{error}</p>}
+
+        <Button type="submit" disabled={loading} className="w-full">
+          {loading ? "در حال ثبت‌نام..." : "ثبت‌نام"}
+        </Button>
+      </form>
+    </div>
   );
 }

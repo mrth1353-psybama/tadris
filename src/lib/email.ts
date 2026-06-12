@@ -3,7 +3,7 @@ import { Resend } from "resend";
 const resendApiKey = process.env.RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "DataMind AI <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "AI & Data Analysis <onboarding@resend.dev>";
 const ADMIN_EMAIL = process.env.ADMIN_NOTIFICATION_EMAIL || "mrth1353@gmail.com";
 
 export async function notifyNewOrder({
@@ -27,7 +27,7 @@ export async function notifyNewOrder({
   await resend.emails.send({
     from: FROM_EMAIL,
     to: ADMIN_EMAIL,
-    subject: "سفارش جدید در DataMind AI",
+    subject: "سفارش جدید در AI & Data Analysis",
     html: `
       <div dir="rtl" style="font-family: Tahoma, sans-serif; line-height: 1.8;">
         <h2>یک سفارش جدید ثبت شد</h2>

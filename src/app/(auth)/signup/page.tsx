@@ -6,7 +6,7 @@ import { SupabaseNotConfiguredNotice } from "@/components/auth/SupabaseNotConfig
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 
 export const metadata: Metadata = {
-  title: "ثبت‌نام | DataMind AI",
+  title: "ثبت‌نام | AI & Data Analysis",
 };
 
 export default function SignupPage() {
