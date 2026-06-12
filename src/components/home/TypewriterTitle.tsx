@@ -20,17 +20,24 @@ export function TypewriterTitle({
 
   useEffect(() => {
     setLength(0);
-    const interval = setInterval(() => {
-      setLength((current) => {
-        if (current >= fullText.length) {
-          clearInterval(interval);
-          return current;
-        }
-        return current + 1;
-      });
-    }, 60);
+    let interval: ReturnType<typeof setInterval> | undefined;
 
-    return () => clearInterval(interval);
+    const timeout = setTimeout(() => {
+      interval = setInterval(() => {
+        setLength((current) => {
+          if (current >= fullText.length) {
+            if (interval) clearInterval(interval);
+            return current;
+          }
+          return current + 1;
+        });
+      }, 110);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeout);
+      if (interval) clearInterval(interval);
+    };
   }, [fullText]);
 
   let consumed = 0;
