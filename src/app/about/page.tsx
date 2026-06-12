@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  BarChart3,
   BrainCircuit,
   GraduationCap,
   LineChart,
@@ -19,15 +20,7 @@ export const metadata: Metadata = {
     "آشنایی با محمدرضا تدریس حسنی، آماری‌شناس و مشاور هوش مصنوعی متخصص تحلیل داده و مدل‌یابی معادلات ساختاری (SEM) برای پژوهش‌های روان‌شناسی، مشاوره و علوم تربیتی.",
 };
 
-const software = [
-  "SPSS",
-  "Amos",
-  "Lisrel",
-  "SmartPLS",
-  "R",
-  "Jamovi",
-  "Excel",
-];
+const software = ["SPSS", "Amos", "Lisrel", "SmartPLS"];
 
 const expertiseAreas = [
   {
@@ -107,14 +100,14 @@ export default function AboutPage() {
       <section className="py-16 sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <div className="mx-auto flex w-full max-w-sm flex-col items-center text-center lg:mx-0 lg:items-start lg:text-start">
-            <div className="flex h-40 w-40 items-center justify-center rounded-full bg-brand-teal/10 text-5xl font-bold text-brand-teal">
-              م.ت
+            <div className="flex h-40 w-40 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
+              <BarChart3 size={72} strokeWidth={1.5} />
             </div>
             <h1 className="mt-6 text-3xl font-bold text-brand-charcoal sm:text-4xl">
               محمدرضا تدریس حسنی
             </h1>
             <p className="mt-2 text-lg font-semibold text-brand-navy">
-              آماری‌شناس و مشاور هوش مصنوعی
+              تحلیل‌گر داده‌های آماری و مشاور هوش مصنوعی
             </p>
             <div className="mt-4 flex flex-wrap justify-center gap-2 lg:justify-start">
               {software.map((item) => (
