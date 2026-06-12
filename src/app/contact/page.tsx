@@ -16,17 +16,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "ایمیل",
-    value: ["mrth1353@gmail.com", "تلفن تماس: 09014314859"],
+    value: ["ایمیل من : mrth1353@gmail.com", "تلفن تماس من: 09014314859"],
+    card: "!bg-brand-navy/15",
   },
   {
     icon: Clock,
     title: "زمان پاسخ‌گویی",
     value: ["معمولاً ظرف ۲۴ تا ۴۸ ساعت کاری پاسخ داده می‌شود."],
+    card: "!bg-brand-navy/22",
   },
   {
     icon: MessageCircle,
     title: "شبکه‌های اجتماعی",
     value: [socialLinks.map((link) => link.label).join(" · ")],
+    card: "!bg-brand-navy/30",
   },
 ];
 
@@ -36,14 +39,18 @@ export default function ContactPage() {
       <Container>
         <SectionHeading
           eyebrow="تماس با من"
-          title="بگویید برای چه چیزی به کمک نیاز دارید"
+          title="چطور می‌توانم کمک کنم"
           description="فرم زیر را پر کنید تا خلاصه‌ای از پروژه یا سوال‌تان برایم ارسال شود. می‌توانید همین حالا جلسه مشاوره رایگان را هم درخواست بدهید."
         />
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.4fr]">
+        <div className="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+          <Card className="!bg-brand-navy/10">
+            <ContactForm />
+          </Card>
+
           <div className="space-y-4">
-            {contactInfo.map(({ icon: Icon, title, value }) => (
-              <Card key={title} className="flex items-start gap-4">
+            {contactInfo.map(({ icon: Icon, title, value, card }) => (
+              <Card key={title} className={`flex items-start gap-4 ${card}`}>
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
                   <Icon size={20} />
                 </div>
@@ -55,7 +62,6 @@ export default function ContactPage() {
                     <p
                       key={line}
                       className="mt-1 text-sm leading-7 text-brand-charcoal/70"
-                      dir={line.includes("@") ? "ltr" : undefined}
                     >
                       {line}
                     </p>
@@ -64,10 +70,6 @@ export default function ContactPage() {
               </Card>
             ))}
           </div>
-
-          <Card>
-            <ContactForm />
-          </Card>
         </div>
       </Container>
     </section>
