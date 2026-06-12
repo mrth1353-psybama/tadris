@@ -50,7 +50,7 @@ function BarChart() {
         y1="140"
         x2="290"
         y2="140"
-        className="stroke-brand-charcoal/15"
+        className="stroke-brand-cream/20"
         strokeWidth="1"
       />
       {bars.map((bar, i) => (
@@ -85,7 +85,7 @@ function LineChart() {
         y1="140"
         x2="290"
         y2="140"
-        className="stroke-brand-charcoal/15"
+        className="stroke-brand-cream/20"
         strokeWidth="1"
       />
       <path
@@ -133,7 +133,7 @@ function ScatterChart() {
         y1="140"
         x2="290"
         y2="140"
-        className="stroke-brand-charcoal/15"
+        className="stroke-brand-cream/20"
         strokeWidth="1"
       />
       {points.map(([x, y], i) => (
@@ -182,7 +182,7 @@ function SemDiagram() {
         x="60"
         y="75"
         textAnchor="middle"
-        className="fill-brand-charcoal font-mono text-[11px]"
+        className="fill-brand-cream font-mono text-[11px]"
       >
         F1
       </text>
@@ -194,7 +194,7 @@ function SemDiagram() {
             y1="70"
             x2="190"
             y2={item.y + 14}
-            className="stroke-brand-charcoal/30 animate-draw-line"
+            className="stroke-brand-cream/30 animate-draw-line"
             strokeWidth="1.5"
             pathLength="100"
             style={{ animationDelay: `${0.5 + i * 0.2}s` }}
@@ -214,7 +214,7 @@ function SemDiagram() {
             x="220"
             y={item.y + 18}
             textAnchor="middle"
-            className="fill-brand-charcoal font-mono text-[11px]"
+            className="fill-brand-cream font-mono text-[11px]"
           >
             {item.label}
           </text>
@@ -249,7 +249,7 @@ function PieChart() {
         <circle
           r="50"
           fill="none"
-          className="stroke-brand-charcoal/10"
+          className="stroke-brand-cream/15"
           strokeWidth="20"
         />
         {segments.map((segment, i) => {
@@ -278,7 +278,7 @@ function PieChart() {
         <text
           textAnchor="middle"
           y="6"
-          className="fill-brand-charcoal animate-fade-in-up font-mono text-sm font-bold"
+          className="fill-brand-cream animate-fade-in-up font-mono text-sm font-bold"
           style={{ animationDelay: "1.2s" }}
         >
           n = 240
@@ -304,9 +304,9 @@ export function AnimatedChartsShowcase() {
   const scene = scenes[index];
 
   return (
-    <div className="rounded-3xl border border-brand-charcoal/10 bg-gradient-to-br from-brand-sand to-brand-peach p-8 shadow-lg">
-      <p className="font-mono text-sm text-brand-gray">{scene.label}</p>
-      <p className="mt-1 font-mono text-sm text-brand-teal">{scene.caption}</p>
+    <div className="rounded-3xl border border-brand-charcoal/10 bg-gradient-to-br from-brand-espresso to-brand-rust p-8 shadow-lg">
+      <p className="font-mono text-sm text-brand-sand/80">{scene.label}</p>
+      <p className="mt-1 font-mono text-sm text-brand-gold">{scene.caption}</p>
 
       <div key={tick} className="mt-4 h-48">
         {scene.id === "bar" && <BarChart />}
