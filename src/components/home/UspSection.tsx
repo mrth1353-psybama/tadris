@@ -10,7 +10,7 @@ const points = [
 
 export function UspSection() {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-brand-peach py-16 sm:py-24">
       <Container className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <SectionHeading
           eyebrow="چرا من؟"
@@ -22,7 +22,7 @@ export function UspSection() {
           {points.map((point) => (
             <li
               key={point}
-              className="flex items-start gap-3 rounded-2xl border border-brand-charcoal/10 bg-brand-ivory p-4"
+              className="flex items-start gap-3 rounded-2xl border border-brand-charcoal/10 bg-brand-cream p-4"
             >
               <CheckCircle2 className="mt-0.5 shrink-0 text-brand-teal" size={20} />
               <p className="text-sm leading-7 text-brand-charcoal/80">{point}</p>

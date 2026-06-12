@@ -144,7 +144,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-brand-peach py-16 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="حوزه‌های تخصصی"
@@ -198,7 +198,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-brand-sand py-16 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="سوابق"

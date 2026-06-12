@@ -27,7 +27,7 @@ const audiences = [
 
 export function AudienceSection() {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="bg-brand-sand py-16 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow="مخاطبان"

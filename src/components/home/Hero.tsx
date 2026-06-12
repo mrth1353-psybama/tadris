@@ -8,7 +8,7 @@ const tools = ["SPSS", "Amos", "Lisrel", "SEM"];
 
 export function Hero() {
   return (
-    <section className="overflow-hidden border-b border-brand-charcoal/10 bg-gradient-to-b from-white to-brand-ivory">
+    <section className="overflow-hidden border-b border-brand-charcoal/10 bg-gradient-to-b from-brand-cream to-brand-peach">
       <Container className="grid gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-28">
         <div>
           <Badge tone="teal">مشاور هوش مصنوعی و تحلیلگر آماری</Badge>
@@ -40,7 +40,7 @@ export function Hero() {
             {tools.map((tool) => (
               <span
                 key={tool}
-                className="rounded-md bg-white px-3 py-1 font-mono text-sm text-brand-charcoal shadow-sm ring-1 ring-brand-charcoal/10"
+                className="rounded-md bg-brand-cream px-3 py-1 font-mono text-sm text-brand-charcoal shadow-sm ring-1 ring-brand-charcoal/10"
               >
                 {tool}
               </span>
@@ -49,7 +49,7 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="rounded-3xl border border-brand-charcoal/10 bg-white p-8 shadow-lg">
+          <div className="rounded-3xl border border-brand-charcoal/10 bg-brand-cream p-8 shadow-lg">
             <p className="font-mono text-sm text-brand-gray">model fit</p>
             <p className="mt-2 font-mono text-lg text-brand-teal">
               CFI = 0.96 · RMSEA = 0.048

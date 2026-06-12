@@ -11,7 +11,7 @@ export function CtaBanner({
   description = "اگر الان توی پایان‌نامه، مقاله یا پروژه‌ای گیر کرده‌اید، یک پیام بدهید — با هم نگاه می‌کنیم از کجا شروع کنیم.",
 }: CtaBannerProps) {
   return (
-    <section className="bg-brand-charcoal py-16 sm:py-20">
+    <section className="bg-brand-espresso py-16 sm:py-20">
       <Container className="flex flex-col items-center gap-6 text-center">
         <h2 className="max-w-2xl text-3xl font-bold text-white sm:text-4xl">
           {title}

@@ -17,7 +17,7 @@ export function Header({ isAuthenticated = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-charcoal/10 bg-brand-ivory/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-brand-charcoal/10 bg-brand-cream/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="text-lg font-bold text-brand-charcoal">
           {siteConfig.name}
@@ -64,7 +64,7 @@ export function Header({ isAuthenticated = false }: HeaderProps) {
       </Container>
 
       {open && (
-        <div className="border-t border-brand-charcoal/10 bg-brand-ivory md:hidden">
+        <div className="border-t border-brand-charcoal/10 bg-brand-cream md:hidden">
           <Container className="flex flex-col gap-4 py-4">
             {mainNav.map((item) => (
               <Link

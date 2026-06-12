@@ -114,7 +114,7 @@ export default async function PortfolioPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-brand-peach py-16 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="گواهینامه‌ها"

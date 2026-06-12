@@ -4,7 +4,11 @@
   --color-brand-teal: #1d9e75;
   --color-brand-navy: #185fa5;
   --color-brand-amber: #ef9f27;
-  --color-brand-ivory: #f1efe8;
+  --color-brand-ivory: #f7efe1;
+  --color-brand-cream: #fdf8f1;
+  --color-brand-sand: #f1ddc2;
+  --color-brand-peach: #fbe2cf;
+  --color-brand-espresso: #3b2c22;
   --color-brand-charcoal: #2c2c2a;
   --color-brand-gray: #888780;
 }
@@ -14,6 +18,10 @@
   --color-brand-navy: var(--color-brand-navy);
   --color-brand-amber: var(--color-brand-amber);
   --color-brand-ivory: var(--color-brand-ivory);
+  --color-brand-cream: var(--color-brand-cream);
+  --color-brand-sand: var(--color-brand-sand);
+  --color-brand-peach: var(--color-brand-peach);
+  --color-brand-espresso: var(--color-brand-espresso);
   --color-brand-charcoal: var(--color-brand-charcoal);
   --color-brand-gray: var(--color-brand-gray);
 

@@ -42,7 +42,7 @@ export default function ServicesPage() {
         return (
           <section
             key={categoryKey}
-            className={index % 2 === 1 ? "bg-white py-16 sm:py-24" : "py-16 sm:py-24"}
+            className={index % 2 === 1 ? "bg-brand-peach py-16 sm:py-24" : "py-16 sm:py-24"}
           >
             <Container>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
