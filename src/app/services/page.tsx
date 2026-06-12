@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CheckCircle2, BrainCircuit, ChartSpline } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { LinkButton } from "@/components/ui/Button";
 import { CtaBanner } from "@/components/shared/CtaBanner";
@@ -23,16 +22,6 @@ const categoryOrder: ServiceCategory[] = ["statistical_analysis", "ai_consulting
 export default function ServicesPage() {
   return (
     <>
-      <section className="py-16 sm:py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="خدمات و تعرفه‌ها"
-            title="خدماتی که می‌توانید همین حالا درخواست دهید"
-            align="center"
-          />
-        </Container>
-      </section>
-
       {categoryOrder.map((categoryKey, index) => {
         const category = serviceCategories[categoryKey];
         const Icon = categoryIcons[categoryKey];
